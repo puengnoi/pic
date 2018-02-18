@@ -3858,7 +3858,7 @@ http://line.me/ti/p/09T2waRE7l
                     else:
                         cl.sendText(msg.to,"Done\n\nปิดเเจ้งเเตือนของคุณเเล้ว")
 
-            elif msg.text in ["Notifedbot on","เปิดเเจ้งเตือนบอท","Mbot on"]:
+            elif msg.text in ["Notifedbot on","เปิดเเจ้งเตือนบอท","Mbot on","เปิดรูป"]:
               if msg.from_ in admin:
                 if wait["Notifedbot"] == True:
                     if wait["lang"] == "JP":
@@ -3871,7 +3871,7 @@ http://line.me/ti/p/09T2waRE7l
                         cl.sendText(msg.to,"All bot Notifed On\n\nเปิดเเจ้งเเตือนบอทเเล้ว")
                     else:
                         cl.sendText(msg.to,"Done\n\nเปิดเเจ้งเเตือนบอทเเล้ว")
-            elif msg.text in ["Notifedbot off","ปิดแจ้งเตือนบอท","Mbot off"]:
+            elif msg.text in ["Notifedbot off","ปิดแจ้งเตือนบอท","Mbot off","ปิดรูป"]:
               if msg.from_ in admin:
                 if wait["Notifedbot"] == False:
                     if wait["lang"] == "JP":
@@ -6269,9 +6269,9 @@ http://line.me/ti/p/09T2waRE7l
                 cnt.text = "PHET TAG DONE : " + str(jml) +  " Members"
                 cnt.to = msg.to
                 cl.sendMessage(cnt)
-            elif msg.text in ["@@"]:
-                        cl.sendText(msg.to,"จัดให้")
-            elif "." == msg.text.lower():
+            elif msg.text in ["@cdfb@"]:
+                        cl.sendText(msg.to,"จัgdrhfดให้")
+            elif ")kldsvkdl" == msg.text.lower():
                 if msg.to in wait2['readPoint']:
                         try:
                             del wait2['readPoint'][msg.to]
@@ -6316,7 +6316,7 @@ http://line.me/ti/p/09T2waRE7l
                     cl.sendText(msg.to, "ปิดการอ่านอัตโนมัต\nDelete reading point:\n" + datetime.now().strftime('%H:%M:%S'))
 
                     
-            elif ".." == msg.text.lower():
+            elif "JKJLckvclv" == msg.text.lower():
                     if msg.to in wait2['readPoint']:
                         if wait2["ROM"][msg.to].items() == []:
                              cl.sendText(msg.to, "SELFBOT PHET HACK BOT\n\nLurkers:\nNone")
@@ -6384,7 +6384,7 @@ http://line.me/ti/p/09T2waRE7l
             ginfo = cl.getGroup(op.param1)
             contact = cl.getContact(op.param2)
             image = "http://dl.profile.line-cdn.net/" + contact.pictureStatus
-            cl.sendText(op.param1,"🙏สวัสดีครับ🙏 " + cl.getContact(op.param2).displayName + "\n 🙄ยินดีต้อนรับสู่😛 ☞ " + str(ginfo.name) + " ☜" + "😬อย่าดื่อนะอิอิ🙄")
+            cl.sendText(op.param1,"🙏สวัสดีจร้า🙏 " + cl.getContact(op.param2).displayName + "\n 🙄ยินดีต้อนรับสู่เข้าสู่บ้าน😛 ☞ " + str(ginfo.name) + "\n" + str(wait["acomment"]))
             cl.sendImageWithUrl(op.param1,image)	
                
 
@@ -6426,12 +6426,12 @@ http://line.me/ti/p/09T2waRE7l
                 cl.sendText(op.param1,cl.getContact(op.param2).displayName + "\n" + str(wait["bcomment"]))
                 print "MEMBER OUT GROUP"
 
-        if op.type == 17:
-            if wait["acommentOn"] == True:
-                if op.param2 in Bots:
-                    return
-                cl.sendText(op.param1,cl.getContact(op.param2).displayName + "\n" + str(wait["acomment"]))
-                print "MEMBER HAS JOIN THE GROUP"
+        #if op.type == 17:
+           # if wait["acommentOn"] == True:
+               # if op.param2 in Bots:
+                  #  return
+               # cl.sendText(op.param1,cl.getContact(op.param2).displayName + "\n" + str(wait["acomment"]))
+               # print "MEMBER HAS JOIN THE GROUP"
 
         if op.type == 19:
             if wait["ccommentOn"] == True:
