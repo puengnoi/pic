@@ -11,7 +11,7 @@ from threading import Thread
 from gtts import gTTS
 from googletrans import Translator
 cl = LINETCR.LINE()
-cl.login(token="EpocnjLW0d3OUorT0045.7xCRRg3YdpRmzn8omFJ9rq.TasXdC0N/eos+Hy8CEwQ/L+HC7xpkdTdy1AGugmbi+Y=")
+cl.login(token="EqTWxRSShavJqKHEZDA1.WdJy3lEtmWYrwUqPWWtzaq.SwVKSkIZ9oD0LamJ996LrxkajyqVbzxasRFGhDMaifM=")
 cl.loginResult()
 
 #ki1 = LINETCR.LINE()
@@ -310,13 +310,13 @@ autoinvite = []
 autoleaveroom = []
 targets = []
 mid = cl.getProfile().mid
-Bots = ["ub027c972ec33cb63aeef26707cb9860a",mid]
-self = ["ub027c972ec33cb63aeef26707cb9860a",mid]
-admin = "ub027c972ec33cb63aeef26707cb9860a"
-admsa = "ub027c972ec33cb63aeef26707cb9860a"
-owner = "ub027c972ec33cb63aeef26707cb9860a"
-adminMID = "ub027c972ec33cb63aeef26707cb9860a"
-Creator="ub027c972ec33cb63aeef26707cb9860a"
+Bots = ["uc038d8dcb793330c915ae429c304d901",mid]
+self = ["uc038d8dcb793330c915ae429c304d901",mid]
+admin = "uc038d8dcb793330c915ae429c304d901"
+admsa = "uc038d8dcb793330c915ae429c304d901"
+owner = "uc038d8dcb793330c915ae429c304d901"
+adminMID = "uc038d8dcb793330c915ae429c304d901"
+Creator="uc038d8dcb793330c915ae429c304d901"
 wait = {
     "alwayRead":False,
     "detectMention":True,    
@@ -1765,7 +1765,7 @@ def bot(op):
                 url = msg.contentMetadata["postEndUrl"]
                 cl.like(url[25:58], url[66:], likeType=1001)
 #-----------------------------------------------
-        #if op.type == 17:
+	#if op.type == 17:
            # group = cl.getGroup(op.param1)
            # cb = Message()
            # cb.to = op.param1
@@ -1790,6 +1790,7 @@ def bot(op):
                         if data['status'] == 200:
                             if data['result']['result'] == 100:
                                 cl.sendText(msg.to, "[ChatBOT] " + data['result']['response'].encode('utf-8'))
+													
                                 
             if 'MENTION' in msg.contentMetadata.keys() != None:
                  if wait["detectMention"] == True:
@@ -3710,14 +3711,14 @@ http://line.me/ti/p/09T2waRE7l
             elif msg.text in ["Sp","sp","Speed","speed"]:
                 cl.sendText(msg.to, "ประมวลผลความเร็ว....")
                 start = time.time()
-                time.sleep(0.001)
+                time.sleep(0.00001)
                 elapsed_time = time.time() - start
                 cl.sendText(msg.to, "%sseconds" % (elapsed_time))    
                 print "[Command]Speed palsu executed"
             elif msg.text in ["Bs","bs","bot speed","Bot speed","Bot Speed"]:
                 ki1.sendText(msg.to, "ประมวลผลความเร็ว....")
                 start = time.time()
-                time.sleep(0.001)
+                time.sleep(0.00001)
                 elapsed_time = time.time() - start
                 ki1.sendText(msg.to, "%sseconds" % (elapsed_time))    
                 ki2.sendText(msg.to, "%sseconds" % (elapsed_time))    
@@ -4336,7 +4337,7 @@ http://line.me/ti/p/09T2waRE7l
                     msg.text = txt
                     msg.contentMetadata = {u'MENTION':json.dumps({"MENTIONEES":d})}
                     cl.sendMessage(msg)
-            elif "ราดเกดbh" in msg.text:
+            elif "รวม" in msg.text:
                 group = cl.getGroup(msg.to)
                 k = len(group.members)//100
                 for j in xrange(k+1):
@@ -6268,9 +6269,9 @@ http://line.me/ti/p/09T2waRE7l
                 cnt.text = "PHET TAG DONE : " + str(jml) +  " Members"
                 cnt.to = msg.to
                 cl.sendMessage(cnt)
-            elif msg.text in ["@@@@@@@@"]:
-                        cl.sendText(msg.to,"😱😱😱")
-            elif ".x;fxit" == msg.text.lower():
+            elif msg.text in ["@@"]:
+                        cl.sendText(msg.to,"จัดให้")
+            elif "." == msg.text.lower():
                 if msg.to in wait2['readPoint']:
                         try:
                             del wait2['readPoint'][msg.to]
@@ -6315,7 +6316,7 @@ http://line.me/ti/p/09T2waRE7l
                     cl.sendText(msg.to, "ปิดการอ่านอัตโนมัต\nDelete reading point:\n" + datetime.now().strftime('%H:%M:%S'))
 
                     
-            elif ".dfgfylk." == msg.text.lower():
+            elif ".." == msg.text.lower():
                     if msg.to in wait2['readPoint']:
                         if wait2["ROM"][msg.to].items() == []:
                              cl.sendText(msg.to, "SELFBOT PHET HACK BOT\n\nLurkers:\nNone")
@@ -6367,20 +6368,25 @@ http://line.me/ti/p/09T2waRE7l
             			"STKPKGID": "1",            						"STKVER": "100" }
             			cl.sendMessage(msg)
 
+						
+																
         if op.type == 15:
             if wait["Notifed"] == True:
                 if op.param2 in Bots:
                     return
                 cl.sendText(op.param1,cl.getContact(op.param2).displayName + "\n􀜁􀄄􏿿 เเล้วพบใหม่นะ 􀜁􀄄􏿿")
-                print "MEMBER OUT GROUP"
+                print "MEMBER OUT GROUP"		
 
         if op.type == 17:
-            if wait["Notifed"] == True:
-                if op.param2 in Bots:
-                    return
-                cl.sendText(op.param1,cl.getContact(op.param2).displayName + " ☜ʕ•ﻌ•ʔ ")
-                cl.sendText(op.param1, "􀜁􀄁􏿿 ยินดีต้อนรับครับ 􀜁􀄁􏿿\n􀄃􀅸􏿿 สวัสดีครับผม 􀄃􀅸􏿿\n􂜁􀆄􏿿 อย่าลืมปิดเสียงการเเจ้งเตือนด้วยนะ 􂜁􀆄􏿿\n\n[By.เพชร ทีมทดลองบอท]")
-                print "MEMBER HAS JOIN THE GROUP"
+          if wait["Notifed"] == True:
+            if op.param2 in admin:
+                return
+            ginfo = cl.getGroup(op.param1)
+            contact = cl.getContact(op.param2)
+            image = "http://dl.profile.line-cdn.net/" + contact.pictureStatus
+            cl.sendText(op.param1,"🙏สวัสดีครับ🙏 " + cl.getContact(op.param2).displayName + "\n 🙄ยินดีต้อนรับสู่😛 ☞ " + str(ginfo.name) + " ☜" + "😬อย่าดื่อนะอิอิ🙄")
+            cl.sendImageWithUrl(op.param1,image)	
+               
 
         if op.type == 19:
             if wait["Notifed"] == True:
